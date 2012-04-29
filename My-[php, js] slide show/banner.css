@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0;
+	-webkit-transition:all 1000ms;
+	-moz-transition:all 1000ms;
+}
+
+body{
+	/*background-color:#eef;*/
+}
+
+div.container{
+	width:980px;
+	margin:0 auto;
+	padding-top:1px;
+}
+
+div.banner{
+	width:980px;
+	height:534px;
+	overflow:hidden;
+	margin-top:20px;
+	position:relative;
+	/*outline:2px solid red;*/
+}
+
+div.banner div.scroll{
+	/*width:6860px; /* 5*980 (per img) */
+	height:534px;
+	position:absolute;
+	left:0;
+	top:0;
+	-webkit-transition-property:all;
+	-webkit-transition-duration:1500ms;
+	-webkit-transition-timing-function:cubic-bezier(0.5,0.7,0.5,1);
+	-moz-transition-property:all;
+	-moz-transition-duration:1500ms;
+	-moz-transition-timing-function:cubic-bezier(0.5,0.7,0.5,1);
+	
+}
+
+div.banner div.scroll > div{
+	width:980px;
+	height:inherit;
+	float:left;
+}
+
+div.banner ul.btn{
+	list-style-type:none;
+	/*width:250px;*/
+	min-height:40px;
+	position:absolute;
+	right:0;
+	left:0;
+	margin:0 auto;
+	bottom:-100px;	
+}
+
+div.banner ul.btn li{
+	float:left;
+	width:100px;
+	height:inherit;
+	margin-right:1px;
+	cursor:pointer;
+	-webkit-transition:all 1000ms;
+	-moz-transition:all 1000ms;
+	opacity:0.5;
+	
+}
+
+div.banner ul.btn li:hover{
+	margin-top:-25px;
+	-webkit-transform:scale(1.2,1.2);
+	margin-bottom:5px;
+	opacity:1;
+	-webkit-transition-duration:300ms;
+	-moz-transition-duration:100ms;
+}
+
+div.banner:hover div{
+	opacity:1;
+	left:0;
+	-moz-transition:all 1000ms;
+}
+
