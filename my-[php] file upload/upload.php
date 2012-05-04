@@ -35,7 +35,9 @@ function upload_img($dir_path, $size_limit){
 	return $file_path;
 }
 
+mkdir("./uploaded", 0700, true);
 $img = upload_img('./uploaded',200); //call upload_img and need to creat new folde by name uploaded
+chmod("./uploaded", 0755);
 
 if($img) echo "Path : $img <br /> <img src='$img' width='300' />";
 
