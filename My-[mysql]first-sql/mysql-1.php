@@ -1,3 +1,5 @@
+
+
 <?php
 $host="localhost";
 $username="root";
@@ -25,12 +27,23 @@ mysql_query("INSERT INTO $table(id,username) VALUES ('4', 'they')")  or die (mys
 //mysql_query("DELETE FROM $table");
 
 $query=mysql_query("SELECT * FROM $table ");
-
-while($rows=mysql_fetch_array($query)):
-	$my_id=$rows['id'];
-	$my_username=$rows['username'];
-	
-	echo "$my_id . $my_username <br />";
-endwhile;
+echo "<table >";
+	while($rows=mysql_fetch_array($query)):
+		
+		$my_id=$rows['id'];
+		$my_username=$rows['username'];
+		
+		echo "<tr>";
+		
+			echo"<td style='border:1px solid black'>";
+				echo "$my_id . $my_username <br />";
+			echo"</td>";
+		
+		echo "</tr>";
+	endwhile;
+echo "</table>";
 
 ?> 
+
+
+
