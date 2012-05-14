@@ -1,0 +1,77 @@
+
+
+/* Book list
+-------------------------------------------------- */
+
+div.booklist{
+	
+}
+
+div.booklist h1{
+	margin-bottom: 25px;
+}
+
+div.booklist div.book{
+	margin-bottom: 25px;
+	width:400px;
+	min-height:330px;
+	padding-top:1px;
+}
+
+div.booklist .title{
+	margin-bottom: 15px;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	text-shadow:1px 1px #999999;
+}
+
+div.booklist .pic{
+	display : block;
+	float   : left;
+	width   : 160px;
+	height  :auto;
+	box-shadow:3px 3px #eee;
+	opacity:0.5;
+}
+
+div.booklist .text{
+	margin-left : 170px;
+	height:200px;
+}
+
+div.booklist .author{
+	display : block;
+	width:50px;
+	overflow:hidden;
+	height:20px;	
+	margin-left:20px;
+}
+div.booklist .price{
+	display : block;
+	float: right;
+	font-weight:bold;
+	font-size:16px;
+	margin-top: 30px;
+	position:relative;
+	width:40px;
+	height:20px;
+	overflow:hidden;	
+}
+div.booklist .price .top{
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:2;	
+	background-color:#000;
+	color:#fff;
+}
+div.booklist .price .bottom{
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:1;	
+}
+div.disc{
+	height:20px;
+	overflow:hidden;
+	margin-left:20px;	
+}

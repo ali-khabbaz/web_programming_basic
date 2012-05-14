@@ -1,0 +1,34 @@
+$(function(){
+	var key=0;
+	$('h1').click(function(){
+		$(this).animate({'color':'#11a'},1000);
+	});
+	$('.price').mouseover(function(){		
+			$(this).children(".top").animate({'left':'40px'},500); 
+	});
+	$('.price').mouseout(function(){		
+			$('.price .top').animate({'left':'0'},500);		
+	});
+	$('.author').mouseover(function(){
+		$(this).animate({'width':'180px'},500);
+	});
+	$('.author').mouseout(function(){
+		$(this).animate({'width':'50px'},1000);
+	});
+	$('.disc').mouseover(function(){
+		$(this).animate({'height':'200px'},1000);
+	});
+	$('.disc').mouseout(function(){
+		$(this).animate({'height':'20px'},1000);
+	});
+	$('.pic').mouseover(function(){
+		$(this).animate({'width':'180px'},500,null,function(){
+			$(this).animate({'opacity':1},500);
+		});
+	});
+	$('.pic').mouseout(function(){
+		$(this).animate({'width':'160px'},500,null,function(){
+			$(this).animate({'opacity':0.5},500);
+		});
+	});
+});
