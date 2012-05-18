@@ -15,10 +15,44 @@
 		<div class="clear"></div>
 	</div>
 	<div class="container-menu">
-		<div class="logo left w7"><h1>SCOPE.</h1></div>
-		<div class="menu ml7"></div>
+		
+		<div class="topmenu right last">
+			<ul>
+				<?php
+					wp_list_pages(array(
+						'title_li'=>'',
+						'depth'=>1
+					));
+				?>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		<div class="logo w7 mra"><h1>SCOPE.</h1></div>
+		<div class="clear"></div>
 	</div>
-</div>
+	<div class="container-contents">
+		<div class="sidebar w7 right last">bla bla bla</div>	
+		<div class="content mr7">
+		<?php if(have_posts()){ the_post(); ?>
+			<div class="post">
+				<h2><?php echo $post->post_title; ?></h2>
+				<p><?php echo the_content(); ?></p>
+			</div>
+		<?php }else{
+			echo 'Nothing !';
+		} ?>
 
+		<!--
+		<pre><?php 
+			print_r($post);
+		?></pre>
+		-->
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="container-widgets"></div>
+	<div class="container-footer"></div>
+</div>
+<div class="backimage"></div>
 </body>
 </html>
